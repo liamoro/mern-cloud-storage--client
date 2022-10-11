@@ -1,0 +1,36 @@
+@import "../../../utils/colors.scss";
+
+.uploader {
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  background-color: $font-color;
+  bottom: 5px;
+  right: 5px;
+  padding: 20px;
+  border-radius:  12px 12px 0px 12px;
+  overflow-y: auto;
+  
+  &__close {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: $background-color;
+    border: 1px #8998bb solid;
+    cursor: pointer;
+    &:hover {
+      background-color: #e49636;
+      color: $font-color_light;
+      border: 1px #d2882c solid;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: $background-color;
+    user-select: none;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../../utils/colors.scss";
+
+
+.upload-file {
+  background-color: $font-color;
+  border-radius: 8px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  background-color:$background-color;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    ;
+
+    &__title {
+      color: $background-color;
+    }
+  }
+  &__delete {
+    background: url('../../../assets/img/trash.svg') no-repeat center ;
+    background-size: 13px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 37px;
+    cursor: pointer;
+  }
+  &__progress-bar {
+    height: 1.2rem;
+    border-radius: 8px;
+    background-color: #56688538;
+    border: 1px solid $font-color;
+    display: flex;
+    margin: 3px 0;
+    line-height: 1rem;
+
+  }
+  &__upload-bar {
+    background-color: rgb(57, 163, 57);
+    border-radius: 8px;
+    width: 0%;
+  }
+  &__percent {
+    color: $background-color;
+    position: absolute;
+    left: 50%;
+
+  }
+}

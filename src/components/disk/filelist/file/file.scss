@@ -1,0 +1,116 @@
+@import "../../../../utils/colors";
+
+.file {
+  margin: 10px 0;
+  border-bottom: solid 2px $font-color ;
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+  &__img {
+    justify-self: center;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__date {
+    grid-column-start: 5;
+    justify-self: center;
+  }
+  &__size {
+    grid-column-start: 6;
+    justify-self: center;
+  }
+  &__btn {
+    display: none;
+    padding: 5px 10px;
+    width: fit-content;
+    border-radius: 37px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+  }
+  &__download {
+    background: url('../../../../assets/img/download.svg') no-repeat center;
+    width: 58px;
+    height: 34px;
+    border: 1px solid $font-color;
+  }
+  &__delete {
+    background: url('../../../../assets/img/trash.svg') no-repeat center;
+    width: 58px;
+    height: 34px;
+    border: 1px solid $font-color;
+  }
+  &:hover &__date {
+    grid-column-start: 3;
+  }
+
+  &:hover &__size {
+    grid-column-start: 4;
+  }
+  &:hover &__download {
+    grid-column-start: 5;
+  }
+  &:hover &__delete {
+    grid-column-start: 6;
+  }
+  &:hover &__btn {
+    display: block;
+  }
+}
+.directory {
+  cursor: pointer;
+}
+
+.file-plate {
+  position: relative;
+  width: 150px;
+  height: 162px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 6px;
+
+  &__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+  }
+  &__img {
+    width: 100px;
+    height: 100px;
+  }
+  &__btns {
+    display: none;
+    margin-top: 5px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  &__btn {
+    cursor: pointer;
+    width: 31px;
+    height: 23px;
+    background-size: 14px;
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+  &:hover  {
+    background-color: rgba(0,0,0,0.05);
+    box-shadow: rgb(0,0,0,0.01)  3px 3px 15px inset;
+    z-index: 1000;
+  }
+  &:hover &__btns {
+    display: flex;
+
+  }
+
+}
